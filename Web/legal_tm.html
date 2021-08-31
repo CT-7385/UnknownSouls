@@ -1,0 +1,122 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/legal_css.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.0-alpha.31/swiper-bundle.css" integrity="sha512-1lfjash6aoyEojts4qbfr/dCBluaWHP052n0vaMRKMzYs3lQ4WwhKNblQZ7g5GHuAsISsOSqCO8iE2QCQVXSsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=M+PLUS+1p:wght@300&family=Noto+Sans+JP:wght@300&family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+    <title>法的通知 | Travelers Production</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/jquery.inview.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+
+    <script>
+        $(function () {
+            $('a[href^="#"]').click(function () {
+                var time = 500;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html,body").animate({ scrollTop: position }, time, "swing");
+                return false;
+            });
+        });
+
+        $(function () {
+            $('html,body').animate({
+                scrollTop: 0
+            });
+        });
+
+
+
+        //フェード関係
+        $(function () {
+            $(".fadein").on("inview", function (event, isInView) {
+                if (isInView) {
+                    $(this).stop().addClass("scrollin");
+                }
+            });
+        });
+        $(function () {
+            $(".fadestay").on("inview", function (event, isInView) {
+                if (isInView) {
+                    $(this).stop().addClass("scrollin");
+                }
+            });
+        });
+    </script>
+    <!--
+        <section class="Wrapper">
+            <div class="Container">
+                <div class="Content">
+        <h1 align="center" class="HeadTitle">Unknown Souls</h1>
+
+    </div>
+            </div>
+            </section>
+            -->
+    <header class="site-header">
+        <div class="wrapper site-header__wrapper">
+            <a href="index.html" class="brand">Unknown Souls</a>
+            <nav class="nav">
+                <button class="nav__toggle" aria-expanded="false" type="button">
+                    menu
+                </button>
+                <ul class="nav__wrapper">
+                    <li class="nav__item"><a href="index.html">About</a></li>
+                    <li class="nav__item"><a href="index.html">Media</a></li>
+                    <li class="nav__item"><a href="index.html">Prologue</a></li>
+                    <li class="nav__item"><a href="index.html">Products</a></li>
+                    <li class="nav__item"><a href="legal_tm.html">Legal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>法的通知</h1>
+        <h2>商標について</h2>
+        <div class="legal_sentences">
+           <section class="sentence"> Unknown Souls及び&copy;Travelers Productionは、ユニティ・テクノロジーズまたはその関連会社がスポンサーとなっているものではなく、ユニティ・テクノロジーズまたはその関連会社と提携しているものではありません。「Unity」は、米国およびその他の地域でのユニティ・テクノロジーズまたはその関連会社の商標または登録商標です。</section>
+
+           <section class="sentence">Windowsは、米国およびその他の国におけるMicrosoft Corporation および/またはその関連会社の登録商標または商標です。</section>
+
+           <section class="sentence">macOSは、米国およびその他の国で登録されたApple Inc.の商標です。</section>
+
+            <section class="sentence">Linuxは、Linus Torvalds氏の米国およびその他の国における登録商標または商標です。</section>
+
+</div>
+
+        <div class="notice">※本ページの内容は変更することがあります。</div>
+    </main>
+
+    <footer>
+        &copy;Travelers Production 2021 ALL RIGHTS RESERVED.
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.0-alpha.31/swiper-bundle.min.js" integrity="sha512-Q+8OUI8Z5gjDXj73qEXD1tmp3Peyvvby30K9oYlhmZe3EXE21XvMUOlnxA+CHXEfcKY0NL4MMghTzbkeFBW8SQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var mySwiper = new Swiper(".swiper-container", {
+            loop: true,
+            slidesPerView:1.5,
+            spaceBetween: 10,
+            centeredSlides: true,
+            speed: 1000,
+            allowTouchMove: false,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        })
+    </script>
+</body>
+</html>
