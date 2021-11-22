@@ -2,7 +2,7 @@
  
     var ua = navigator.userAgent.toUpperCase();
     var url = document.location.pathname;
-    var spDir = 'sp/index.html';
+    var spDir = 'sp/indexsp.html';
  
     (ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1))?
         isSP() :
